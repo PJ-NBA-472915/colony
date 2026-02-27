@@ -34,7 +34,7 @@ GITHUB_TOKEN=ghp_xxxxxxxxxxxx
 Then run:
 
 ```bash
-set -a && source .env && set +a && curl -sSL https://raw.githubusercontent.com/PJ-NBA-472915/colony-/main/scripts/deploy.sh | bash
+set -a && source .env && set +a && curl -sSL https://raw.githubusercontent.com/PJ-NBA-472915/colony/main/scripts/deploy.sh | bash
 ```
 
 This will authenticate with GHCR, pull the image, and start the container.
@@ -44,8 +44,8 @@ This will authenticate with GHCR, pull the image, and start the container.
 ### Clone and Configure
 
 ```bash
-git clone https://github.com/PJ-NBA-472915/colony-.git
-cd colony-
+git clone https://github.com/PJ-NBA-472915/colony.git
+cd colony
 cp .env.example .env
 # Edit .env with your values
 ```
