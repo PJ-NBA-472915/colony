@@ -1,0 +1,14 @@
+services:
+  colony:
+    image: ghcr.io/${GITHUB_PROJECT}/colony:latest
+    build:
+      context: .
+      dockerfile: Containerfile
+    environment:
+      - SSH_PUBLIC_KEY=${SSH_PUBLIC_KEY}
+      - ZEROTIER_NETWORK=${ZEROTIER_NETWORK}
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    restart: unless-stopped
